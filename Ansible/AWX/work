@@ -1,0 +1,18 @@
+pub   rsa4096 2017-02-22 [SCEA]
+      9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
+sub   rsa4096 2017-02-22 [S]
+
+
+
+##########################################################################
+
+sudo apt-get install docker-ce=5:20.10.12~3-0~ubuntu-focal docker-ce-cli=5:20.10.12~3-0~ubuntu-focal containerd.io
+
+
+
+xc7OC1aC0KkpGRbeZRhvOtTVdxYPLc  (pwgen -N 1 -s 3)kGaG55Tn5FuVQQ9Sv295BLMOH9awty
+
+
+
+Tbu8sGzHAUyfhZ8xTml5ohcGm4KeNq

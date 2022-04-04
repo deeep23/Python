@@ -1,0 +1,8 @@
+ cat /proc/sys/vm/swappiness
+ sudo sysctl vm.swappiness=10
+ sudo nano /etc/sysctl.conf
+ cat /proc/sys/vm/vfs_cache_pressure
+ sudo sysctl vm.vfs_cache_pressure=50
+ sudo nano /etc/sysctl.conf
+ htop
+ cat /proc/sys/vm/vfs_cache_pressure

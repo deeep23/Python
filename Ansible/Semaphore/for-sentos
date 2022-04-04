@@ -1,0 +1,27 @@
+adduser semaphore
+passwd semaphore
+##root
+give permission User
+yum install mariadb mariadb-server
+systemctl enable mariadb
+systemctl start mariadb
+mysql_secure_installation
+go to semaphore ui site amd64rpm download
+yum install git wget -y
+su - samaphore
+mkdir  /opt/semaphore
+chown -R semaphore.semaphore /opt/semaphore/
+cd /opt/semaphore/
+wget paste link
+sudo rpm -ivh semaphore content
+semaphore -setup
+db - default
+db passwd - previous passwd
+
+
+usr name : semaphore 
+email : semaphore@localhost
+
+rm -f remove download package 
+mkdir playbooks
+semaphore -config output/config.json

@@ -1,0 +1,56 @@
+Prod-NagiosXI - 20.197.24.18
+
+Centos7 install:-
+rpm -Uvh http://repo.nagios.com/nagios/7/nagios-repo-7-4.el7.noarch.rpm
+yum install ncpa -y
+*******************************************************************************
+Ubuntu 18.04 install:-
+wget https://assets.nagios.com/downloads/ncpa/ncpa-latest.amd64.deb
+sudo dpkg -i ./ncpa-latest.amd64.deb
+*******************************************************************************
+Ubuntu 20.04 Install:-
+wget https://assets.nagios.com/downloads/ncpa/ncpa-2.4.0.d9.amd64.deb
+sudo dpkg -i ./ncpa-2.4.0.d9.amd64.deb
+*******************************************************************************
+sudo apt install ncpa
+sudo nano /usr/local/ncpa/etc/ncpa.cfg
+sudo service ncpa_listener restart
+#################################################################################################
+
+
+
+Please add this server - using NCPA
+IP - 10.0.0.128 
+Token - uidbioe32oojdvo
+
+uidbioe32oojdv1 - rachit demo
+uidbioe32oojdv2 - Harsh Demo
+uidbioe32oojdv3 - Prashant demo 
+uidbioe32oojdv4 - adarsh demo
+uidbioe32oojdv5 - hemant centos
+uidbioe32oojdv6 - mayank demo
+uidbioe32oojdv7 - MSIL-DASHBOARD-Staging
+uidbioe32oojdv8 - Akash-Saxena-DEV-server
+uidbioe32oojdv9 - NPCI-Staging
+uidbioe32oojdv10 - Agent-Panel-New-Setup-ALI
+uidbioe32oojdv11 - my-Staging-Middle
+uidbioe32oojdv12 - Staging-Python
+uidbioe32oojdv13 - Virtual Interviewer Demo vi.rezo.ai
+uidbioe32oojdv14 - Agent-Panel-Ali-6Jan
+uidbioe32oojdv15 - Gaurav-DEV-server
+
+
+**********************************************************************************
+
+check_xi_ncpa!-t 'uidbioe32oojdvo' -P 5693 -M memory/virtual -u 'Gi' -w '50' -c '80'
+
+
+tcp dump
+
+
+
+
+
+
+
+

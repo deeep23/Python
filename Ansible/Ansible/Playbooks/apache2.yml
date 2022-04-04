@@ -1,0 +1,9 @@
+---# apache2 playbook
+-hosts: demo
+ user: semaphore
+ become: yes
+ connection: ssh
+ task:
+   -name: install apache 
+    command: apt-get -y install apache2
+    when: ansible_os_family=="Debian"

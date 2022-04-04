@@ -1,0 +1,26 @@
+
+sudo apt update && apt upgrade -y
+sudo apt install docker.io -y
+sudo systemctl enable docker
+sudo systemctl status docker
+sudo apt install curl
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+apt update
+sudo apt install ansible
+sudo apt install -y nodejs npm
+sudo npm install npm --global
+sudo apt install python3-pip git pwgen vim
+sudo pip3 install requests
+sudo pip3 install docker-compose==1.23.1
+wget https://github.com/ansible/awx/archiv...
+apt install unzip
+unzip 17.1.0.zip
+cd awx/installer/
+ls -al
+cd awx-17.1.0/installer/
+pwgen -N 1 -s 30
+vi inventory
+ansible-playbook -i inventory install.yml
+netstat -tnlp

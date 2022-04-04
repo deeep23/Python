@@ -1,0 +1,45 @@
+###############################################################
+                      AD-hoc Command
+###############################################################
+# /usr/bin/ansible
+ansible groupname -a "ls"
+ansible all -a "touch filename"
+ansible demo -ba "apt install apache2 -y"
+
+
+##############################################################
+               MODULE
+##############################################################              
+ # /etc/ansible/hosts
+
+ansible node_group[0] -b -m apt -a "pkg=apache2 state=present"
+ansible node_group[0] -b -m apt -a "pkg=apache2 state=latest"
+ansible node_group[0] -b -m service -a "name=apache2 state=status"
+ansible node_group[0] -b -m user -a "sharma"
+ansible node_group[0] -b -m copy -a "src=file4 dest= /tmp"
+ansible node_group[0] -b -m setup
+ansible node_group[0]-m setup "filter = *ipv4*"
+ 
+ ####################################################################
+                 PLAYBOOK
+ ####################################################################
+ # make a playbook with yaml extension
+ --- # Playbook Name 
+ - hosts: node_group
+   user: deeep
+   become: yes
+   connection: ssh
+   gather_facts: yes
+    #same file 
+    ansible-playbook {playbook_name}
+***********************************************************************
+--- # Playbook Name
+- hosts: node_group
+  user: all
+  become: yes
+  connection: ssh
+  tasks:
+         - name: install tree on node1 & node2
+           action: apt name=tree state=present
+ ***********************************************************************
+          

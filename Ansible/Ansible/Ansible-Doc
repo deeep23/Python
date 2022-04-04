@@ -1,0 +1,81 @@
+# Create Ansible server with nodes
+      # On Ansible server
+wget package install
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt update
+sudo apt install ansible
+
+sudo apt update && upgrade -y
+      #install dependecy
+sudo apt install git python python-level python-pip openssl ansible -y
+ansible --version
+vi /etc/ansible/hosts
+     [node_group]
+   server1 server_ip
+   server2 server_ip
+vi /etc/ansible/ansible.cfg
+    uncommented inventory 
+    uncommented sudo_user
+adduser deeep
+passwd deeep
+su - deeep
+# give user sudoer permission
+# As a root user
+visudo
+  #ansible All=(All) NOPASSWD:All
+  deeep   ALL=(ALL:ALL) NOPASSWD:ALL
+  #same follow on nodes
+  
+
+#######################################################################    
+   # on node1
+#######################################################################
+ sudo su 
+ adduser node1
+ passwd node1  
+         #follow same as other node
+   su - node1
+
+########################################################################################
+                     Create SSH Connection
+########################################################################################
+ssh server_ip
+#permission denied
+#some change in /etc/ssh/sshd_config
+sudo nano /etc/ssh/sshd_config
+  PermitRootLogin yes
+  PasswordAuthentication yes
+service restart sshd
+ssh node1@172.31.38.19
+ssh-keygen
+ls -a
+cd .ssh/
+ssh-copy-id node1@172.31.38.19
+ssh node1@172.31.38.19 (access without PasswordAuthentication)
+
+######################################################################################
+                         Host Patterns
+######################################################################################
+ansible all --list-hosts   #(check all host list)
+ansible groupname --list-hosts
+ansible groupname[0] --list-hosts
+ansible groupname[1] --list-hosts
+ansible groupname[-1] --list-hosts
+ansible groupname[0:3] --list-hosts
+#####################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

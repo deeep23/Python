@@ -1,0 +1,12 @@
+#pwgen -N 1 -s 96
+USgfmae8lwNRyL0PmQRmJjsRyBZ1j6H7LA6WbMjs8OypiOtxh3erSMA1PpknnnctXTRzjLaKwQyYJe1mqtnBwmd640cfKY5x
+
+
+
+echo -n "Enter Password: " && head -1 </dev/stdin | tr -d '\n' | sha256sum | cut -d" " -f1
+Enter Password: Deepak@123
+d7262a8447f456b425f93e237aa18c540ada14b5c33b359d3762cc096c3be977
+
+
+
+

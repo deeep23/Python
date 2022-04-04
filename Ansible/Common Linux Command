@@ -1,0 +1,35 @@
+top (finsd all running services)
+htop (Same Upthings)
+tail -f /var/log/syslog 
+*************************************************************
+sudo apt-get remove --purge maria*
+ 2073  sudo apt-get remove --purge maria*
+ 2074  rm -f /var/log/mariadb
+ 2075  rm -f /var/log/mariadb/mariadb.log
+ 2076  rm -rf /var/lib/mysql
+ 2077  rm -rf /usr/lib64/mysql
+ 2078  rm -rf /usr/share/mysql
+ ************************************************************
+ps aux | grep sema
+ps aux | grep -i apt #(find running process)
+sudo systemctl daemon-reload
+sudo systemctl start semaphore
+sudo systemctl enable semaphore
+**********************************************************************
+#Port 3000 should now be Open
+ss -tunelp | grep 3000
+
+/home/ubuntu/semaphore
+ tail /var/log/semaphore/semaphore.log
+ curl http://localhost:3000
+systemctl stop firewalld
+systemctl disable firewalld
+[192.168.1.93]
+******************************************************
+ps aux | grep -i apt
+sudo kill <process_id>
+sudo kill -9 <process_id>
+sudo killall apt apt-get
+######################################################
+[sudo dpkg --configure -a]
+lsb_release -a
